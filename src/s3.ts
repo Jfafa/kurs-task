@@ -6,7 +6,7 @@ class S3Service {
   constructor() {
     this.s3 = new S3();
   }
-  async addFile(path: string, file, contentType: string, contentEncoding?: string, bucket?: string) {
+  async addFile(path: string, file, contentType: string, contentEncoding?: string, bucket?: string) : Promise<string> {
     const params = {
       ACL: 'public-read',
       Body: file,
