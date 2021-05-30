@@ -4,9 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
     "start": "ts-node-dev src/app.ts",
-    "prod": "ts-node src/app.ts",
     "deploy-bucket": "aws cloudformation deploy --template ./deploy-bucket.json --stack-name kurs-text-to-handwriting --parameter-overrides S3BucketNameInputParameter='text-to-handwriting-kurs'"
   },
   "author": "",
